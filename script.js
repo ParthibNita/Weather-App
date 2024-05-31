@@ -35,7 +35,7 @@ function updateCards(name, days, idx) {
 
 
 const getWeatherForecast = async (name, lat, lon) => {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=9c226dabb58d69666c4edf8a14665721`)
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=9c226dabb58d69666c4edf8a14665721`)
     const data = await response.json()
     console.log(data)
     const uniqueDate = []
@@ -56,7 +56,7 @@ const getWeatherForecast = async (name, lat, lon) => {
 
 const getDetails = async (cityName) => {
     try {
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=9c226dabb58d69666c4edf8a14665721`)
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=9c226dabb58d69666c4edf8a14665721`)
         const data = await response.json()
 
         const { name, lat, lon } = data[0]
@@ -78,7 +78,7 @@ const getUserDetails = () => {
         async position => {
             const { latitude, longitude } = position.coords
 
-            const response = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=9c226dabb58d69666c4edf8a14665721`)
+            const response = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=9c226dabb58d69666c4edf8a14665721`)
             const data = await response.json()
             console.log(data)
             getWeatherForecast(data[0].name, latitude, longitude)

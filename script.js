@@ -37,7 +37,7 @@ function updateCards(name, days, idx) {
 const getWeatherForecast = async (name, lat, lon) => {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=9c226dabb58d69666c4edf8a14665721`)
     const data = await response.json()
-    console.log(data)
+
     const uniqueDate = []
 
     const forcastDays = data.list.filter(forecast => {
@@ -46,7 +46,6 @@ const getWeatherForecast = async (name, lat, lon) => {
         if (!uniqueDate.includes(forecastDate)) return uniqueDate.push(forecastDate)
     })
 
-    // console.log(forcastDays);
     weatherCards.innerHTML = ''
     forcastDays.forEach((day, idx) => {
         updateCards(name, day, idx)

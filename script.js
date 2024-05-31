@@ -20,7 +20,7 @@ function updateCards(name, days, idx) {
     }
     else {
         currWeather.innerHTML = `<div class="info">
-                                    <h2>${name} (${days.dt_txt.slice(0, -9)})</h2>
+                                    <h2>${name}</h2>
                                     <h4>Temp: ${Math.trunc((days.main.temp - 273.15))}°C</h4>
                                     <h4>Wind: ${days.wind.speed}m/s</h4>
                                     <h4>Humidity: ${days.main.humidity}%</h4>
@@ -79,11 +79,11 @@ const getUserDetails = () => {
 
             const response = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=9c226dabb58d69666c4edf8a14665721`)
             const data = await response.json()
-            console.log(data)
+
             getWeatherForecast(data[0].name, latitude, longitude)
         },
         error => {
-            alert(`${error.message}.Please reset your permission`)
+            alert(`${error.message}. Please RESET your Permission`)
         }
     )
 }

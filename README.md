@@ -3,8 +3,8 @@ A responsive website that shows the weather and 5-days forecast of any city or c
 
 ### Screenshot
 
-![mobile version](../Huddle%20Landing%20Page/screenshots/mobile.png)
-![desktop version](../Huddle%20Landing%20Page/screenshots/desktop.png)
+![mobile version](./WeatherApp-Mobile.png)
+![desktop version](./WeatherApp-Website.png)
 
 ### Links
 - Live Site URL: (https://creative-torrone-56d84b.netlify.app)

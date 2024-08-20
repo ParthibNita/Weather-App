@@ -3,7 +3,12 @@ A responsive website that shows the weather and 5-days forecast of any city or c
 
 ### Screenshot
 
-![mobile version](./WeatherApp-Mobile.png)
+#### Mobile Design
+
+![mobile version](./WeatherApp-Mobile.png "Mobile-version")
+
+#### Web Design
+
 ![desktop version](./WeatherApp-Website.png)
 
 ### Links
